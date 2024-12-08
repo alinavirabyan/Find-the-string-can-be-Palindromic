@@ -18,10 +18,10 @@ for char, count in b.items():
     half_palindrome.append(char * (count // 2))
 
 if odd_count > 1:
-    print("The string cannot be rearranged into a palindrome.")
+    print("chi darnum polindrome")
 else:
     a = "".join(half_palindrome)
     bb = "".join(odd_chars)
     cc = a[::-1]
     full_palindrome = a + bb + cc
-    print("The rearranged palindrome is:", full_palindrome)
+    print("polindrom e", full_palindrome)
