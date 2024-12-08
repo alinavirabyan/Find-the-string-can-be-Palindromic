@@ -18,10 +18,16 @@ for char, count in b.items():
     half_palindrome.append(char * (count // 2))
 
 if odd_count > 1:
-    print("chi darnum polindrome")
+    for i in range(odd_count - 1):
+        half_palindrome.append(odd_chars[i])
+
+    middle = "".join(odd_chars[-1])
 else:
-    a = "".join(half_palindrome)
-    bb = "".join(odd_chars)
-    cc = a[::-1]
-    full_palindrome = a + bb + cc
-    print("polindrom e", full_palindrome)
+    middle = "".join(odd_chars)
+
+a = "".join(half_palindrome)
+cc = a[::-1]
+
+full_palindrome = a + middle + cc
+print("Palindrome is:", full_palindrome)
+
