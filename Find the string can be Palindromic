@@ -1,0 +1,27 @@
+a = input("Enter a string: ")
+b = {}
+
+for c in a:
+    if c in b:
+        b[c] += 1
+    else:
+        b[c] = 1
+
+odd_count = 0
+odd_chars = []
+half_palindrome = []
+
+for char, count in b.items():
+    if count % 2 != 0:
+        odd_count += 1
+        odd_chars.append(char)
+    half_palindrome.append(char * (count // 2))
+
+if odd_count > 1:
+    print("The string cannot be rearranged into a palindrome.")
+else:
+    a = "".join(half_palindrome)
+    bb = "".join(odd_chars)
+    cc = a[::-1]
+    full_palindrome = a + bb + cc
+    print("The rearranged palindrome is:", full_palindrome)
